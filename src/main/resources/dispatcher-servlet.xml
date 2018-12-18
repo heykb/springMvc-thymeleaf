@@ -23,5 +23,6 @@
     <!--视图解析器-->
     <bean class="org.thymeleaf.spring5.view.ThymeleafViewResolver">
         <property name="templateEngine" ref="tmplateEngine"/>
+        <property name="characterEncoding" value="UTF-8"/><!--很关键否则会中文乱码-->
     </bean>
 </beans>

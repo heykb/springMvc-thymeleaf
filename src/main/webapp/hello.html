@@ -6,6 +6,19 @@
 </head>
 <body>
 
-<p th:text="${context}"></p>
+<table>
+    <thead>
+        <th>#</th>
+        <th>用户名</th>
+        <th>密码</th>
+    </thead>
+    <tbody>
+        <tr th:each="user:${users}">
+            <th th:text="${user.id}"></th>
+            <td th:text="${user.username}"></td>
+            <td th:text="${user.password}"></td>
+        </tr>
+    </tbody>
+</table>
 </body>
 </html>
